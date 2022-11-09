@@ -7,7 +7,7 @@
 .page__navbar {
   position: relative; 
   width: 100vw;
-  height: 80px;
+  height: 4vh;
   background-color: #888404;
   border: 6px solid black;
   border-bottom-width: 0px;
@@ -16,7 +16,7 @@
 .page__content {
   position: relative;
   width: 100vw;
-  height: calc(100vh - 80px);
+  height: 96vh;
   background-color: #308404;
   border: 5px solid black;
 }
@@ -33,20 +33,15 @@
   width: 250px;
   height: 250px;
   transform: rotate(45deg);
+  bottom: 286px;
+  right: 54px;
+  background-color: red;
+  border: 5px solid black;
 }
 
 .page__diamond--left {
   bottom: 54px;
   left: 54px;
-  background-color: red;
-  border: 5px solid black;
-}
-
-.page__diamond--right {
-  top: 54px;
-  right: 54px;
-  background-color: red;
-  border: 5px solid black;
 }
 
 .page__rectangles-circle {
@@ -78,10 +73,6 @@
   background-color: blue;
 }
 
-.page__rectangle--top {
-  top: 0;
-}
-
 .page__rectangle--bottom {
   bottom: 0;
 }
@@ -101,9 +92,9 @@
 .page__textbox {
   position: absolute;
   width: 350px;
-  height: 850px;
+  height: 85vh;
   right: 0;
-  top: 25px;
+  top: 1.5vh;
   margin: 10px;
   padding: 10px;
   border: 5px solid black;
