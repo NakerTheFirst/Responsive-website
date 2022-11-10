@@ -108,15 +108,24 @@
   text-align: center;
 }
 
+/* Default fullscreen viewport */
+@media only screen and (min-width: 900px) {
+  .page__textbox {
+    animation: falling 1s cubic-bezier(.5,.68,.53,.88) 1 forwards;
+  }
+}
+
 /* Page breakpoint no. 1. */
 @media only screen and (min-width: 583px) and (max-width: 900px) {
   .page__textbox {
     background-color: #d03434;
+    animation: right-to-left-slide 1.3s cubic-bezier(.72,.86,.22,1) 1 forwards;
   }
-
+  
   .page__rectangles-circle {
     left: 0;
     top: 600px;
+    animation: left-to-right-slide-equation 800ms cubic-bezier(.72,.86,.22,1) 1 forwards;
   }
 }
 
@@ -127,13 +136,13 @@
     width: 130px;
     left: 5%;
     top: 45%;
-    background-color: blue;
+    animation: left-to-right-swipe 800ms cubic-bezier(.72,.86,.22,1) 1 forwards;
   }
-
+  
   .page__text {
     font-size: 4em;
   }
-
+  
   .page__rectangles-circle {
     width: 200px;
     height: 100px;
@@ -149,12 +158,12 @@
     top: 15px;
     margin: 5px;
   }
-
+  
   .page__rectangle {
     width: 100px;
     height: 15px;
   }
-
+  
   .page__circle {
     width: 75px;
     height: 75px;
@@ -162,12 +171,12 @@
     top: 3px;
     margin: 5px;
   }
-
+  
   .page__diamonds {
     width: 300px;
     height: 300px;
   }
-
+  
   .page__diamond {
     width: 125px;
     height: 125px;
@@ -179,4 +188,34 @@
     bottom: 28px;
     left: 28px;
   }
+}
+
+/* Animations */
+@keyframes left-to-right-swipe {
+  0%   {opacity: 0; left: -400px;}
+  80%  {left: 5%;}
+  100% {background-color: blue;}
+}
+
+@keyframes left-to-right-slide-equation {
+  0%   {opacity: 0; left: -400px;}
+  80%  {left: 5%;}
+}
+
+@keyframes falling {
+  0%   {top: -200%;}
+  65%  {top: 1.5vh;}
+  85%  {top: 3vh;}
+  90%  {top: 1.5vh;}
+  95%  {top: 2vh;}
+  100% {top: 1.5vh}
+}
+
+@keyframes right-to-left-slide {
+  0%   {
+    transform: translateX(500%);
+    scale: 0.2;
+  }
+  30%  {transform: rotate(0);}
+  100% {}
 }
