@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .page__navbar {
@@ -105,4 +106,77 @@
   font-size: 5em;
   font-family: sans-serif;
   text-align: center;
+}
+
+/* Page breakpoint no. 1. */
+@media only screen and (min-width: 583px) and (max-width: 900px) {
+  .page__textbox {
+    background-color: #d03434;
+  }
+
+  .page__rectangles-circle {
+    left: 0;
+    top: 600px;
+  }
+}
+
+/* Page breakpoint no. 2. */
+@media only screen and (min-width: 0px) and (max-width: 582.9px) {
+  .page__textbox {
+    height: 45vh;
+    width: 130px;
+    left: 5%;
+    top: 45%;
+    background-color: blue;
+  }
+
+  .page__text {
+    font-size: 4em;
+  }
+
+  .page__rectangles-circle {
+    width: 200px;
+    height: 100px;
+    left: 0;
+    top: 300px;
+    margin: 5px;
+  }
+
+  .page__rectangles {
+    width: 100px;
+    height: 60px;
+    left: 0;
+    top: 15px;
+    margin: 5px;
+  }
+
+  .page__rectangle {
+    width: 100px;
+    height: 15px;
+  }
+
+  .page__circle {
+    width: 75px;
+    height: 75px;
+    left: 110px;
+    top: 3px;
+    margin: 5px;
+  }
+
+  .page__diamonds {
+    width: 300px;
+    height: 300px;
+  }
+
+  .page__diamond {
+    width: 125px;
+    height: 125px;
+    bottom: 137px;
+    right: 28px;
+  }
+
+  .page__diamond--left {
+    bottom: 28px;
+    left: 28px;
+  }
 }

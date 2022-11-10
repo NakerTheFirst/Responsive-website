@@ -7,4 +7,5 @@ A CSS &amp; HTML only website build as a part of a job interview task
 - Git commit name keywords I use across this and other projects: `Add`, `Fix`, `Update`, `Refactor`, `Merge` 
 
 ## To-dos
-- Add responsiveness
+- Add animations
+- Consider refactoring into grid view layout
