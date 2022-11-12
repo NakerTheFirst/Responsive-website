@@ -108,73 +108,95 @@
   text-align: center;
 }
 
-/* Default fullscreen viewport */
+/* Max-right layout */
 @media only screen and (min-width: 900px) {
   .page__textbox {
-    animation: falling 1s cubic-bezier(.5,.68,.53,.88) 1 forwards;
+    animation: 1s cubic-bezier(0.5, 0.68, 0.33, 1.11) 1 slidein-top;
   }
 }
 
-/* Page breakpoint no. 1. */
+/* Middle layout */
 @media only screen and (min-width: 583px) and (max-width: 900px) {
   .page__textbox {
-    background-color: #d03434;
-    animation: slide-in-right 1.3s cubic-bezier(.72,.86,.22,1) 1 forwards;
+    animation: 0.6s cubic-bezier(.72, .86, .22, 1) 1 forwards slidein-right;
   }
-  
+
   .page__rectangles-circle {
-    left: 0;
+    left: 15px;
     top: 210px;
-    animation: slide-in-left-rec-cir 800ms cubic-bezier(.72,.86,.22,1) 1 forwards;
+    animation: 0.8s cubic-bezier(.72, .86, .22, 1) 1 slidein-left-rec-cir;
   }
 }
 
-/* Page breakpoint no. 2. */
+/* Max-left layout */
 @media only screen and (min-width: 0px) and (max-width: 582.9px) {
   .page__textbox {
     height: 450px;
     width: 150px;
     left: 35px;
     top: 325px;
-    animation: slide-in-left 800ms cubic-bezier(.72,.86,.22,1) 1 forwards;
+    animation: 0.8s cubic-bezier(.72, .86, .22, 1) 1 forwards slidein-left;
   }
-  
+
   .page__text {
     font-size: 4em;
   }
-  
+
   .page__rectangles-circle {
-    left: 0;
+    left: 15px;
     top: 210px;
-    animation: slide-in-left-rec-cir 800ms cubic-bezier(.72,.86,.22,1) 1 forwards;
   }
 }
 
 /* Animations */
-@keyframes slide-in-left {
-  0%   {opacity: 0; left: -400px;}
-  80%  {left: 50px;}
-  100% {background-color: blue;}
+@keyframes slidein-left {
+  0% {
+    opacity: 0;
+    left: -400px;
+  }
+
+  80% {
+    left: 50px;
+  }
+
+  100% {
+    background-color: blue;
+  }
 }
 
-@keyframes slide-in-left-rec-cir {
-  0%   {opacity: 0; left: -400px;}
-  80%  {left: 15px;}
+@keyframes slidein-left-rec-cir {
+  0% {
+    opacity: 0;
+    left: -400px;
+  }
+
+  100% {
+    left: 15px;
+  }
 }
 
-@keyframes falling {
-  0%   {top: -200vh;}
-  65%  {top: 1.5vh;}
-  85%  {top: 3vh;}
-  90%  {top: 1.5vh;}
-  95%  {top: 2vh;}
-  100% {top: 1.5vh}
+@keyframes slidein-top {
+  0% {
+    top: -200vh;
+    right: 0;
+  }
+  
+  100% {
+    top: 1.5vh;
+    right: 0;
+  }
 }
 
-@keyframes slide-in-right {
-  0%   {
-    transform: translateX(500%);
+@keyframes slidein-right {
+  0% {
+    right: -500px;
+  }
+
+  30% {
     scale: 0.2;
   }
-  30%  {transform: rotate(0);}
+
+  100% {
+    background-color: #d03434;
+  }
 }
