@@ -119,13 +119,13 @@
 @media only screen and (min-width: 583px) and (max-width: 900px) {
   .page__textbox {
     background-color: #d03434;
-    animation: right-to-left-slide 1.3s cubic-bezier(.72,.86,.22,1) 1 forwards;
+    animation: slide-in-right 1.3s cubic-bezier(.72,.86,.22,1) 1 forwards;
   }
   
   .page__rectangles-circle {
     left: 0;
     top: 210px;
-    animation: left-to-right-slide-equation 800ms cubic-bezier(.72,.86,.22,1) 1 forwards;
+    animation: slide-in-left-rec-cir 800ms cubic-bezier(.72,.86,.22,1) 1 forwards;
   }
 }
 
@@ -136,7 +136,7 @@
     width: 150px;
     left: 35px;
     top: 325px;
-    animation: left-to-right-slide 800ms cubic-bezier(.72,.86,.22,1) 1 forwards;
+    animation: slide-in-left 800ms cubic-bezier(.72,.86,.22,1) 1 forwards;
   }
   
   .page__text {
@@ -146,18 +146,18 @@
   .page__rectangles-circle {
     left: 0;
     top: 210px;
-    animation: left-to-right-slide-equation 800ms cubic-bezier(.72,.86,.22,1) 1 forwards;
+    animation: slide-in-left-rec-cir 800ms cubic-bezier(.72,.86,.22,1) 1 forwards;
   }
 }
 
 /* Animations */
-@keyframes left-to-right-slide {
+@keyframes slide-in-left {
   0%   {opacity: 0; left: -400px;}
   80%  {left: 50px;}
   100% {background-color: blue;}
 }
 
-@keyframes left-to-right-slide-equation {
+@keyframes slide-in-left-rec-cir {
   0%   {opacity: 0; left: -400px;}
   80%  {left: 15px;}
 }
@@ -171,7 +171,7 @@
   100% {top: 1.5vh}
 }
 
-@keyframes right-to-left-slide {
+@keyframes slide-in-right {
   0%   {
     transform: translateX(500%);
     scale: 0.2;
