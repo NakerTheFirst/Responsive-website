@@ -1,5 +1,7 @@
 # Responsive-website
-A CSS &amp; HTML only website build as a part of a job interview task
+A CSS &amp; HTML only website build as a part of a job interview task. 
+
+Live demo can be found [here](https://nakerthefirst.github.io/Responsive-website/).
 
 ## Additional info
 - I follow CSS BEM methodology
